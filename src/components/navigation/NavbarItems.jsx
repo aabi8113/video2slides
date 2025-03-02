@@ -46,6 +46,7 @@ const NavbarItems = ({ isMobile = false }) => {
         {user?.isLoggedIn ? (
           <>
             <NavLink href="/dashboard">Dashboard</NavLink>
+            <NavLink href="/presentations">Presentations</NavLink>
             <div className="text-gray-400">
               Welcome, {user.name}
             </div>

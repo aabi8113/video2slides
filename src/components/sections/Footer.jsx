@@ -32,6 +32,7 @@ const Footer = () => {
           <ul className="space-y-2">
             <li><Link to="/features" className="hover:text-emerald-500">Features</Link></li>
             <li><Link to="/dashboard" className="hover:text-emerald-500">Dashboard</Link></li>
+            <li><Link to="/presentations" className="hover:text-emerald-500">Presentations</Link></li>
             <li><Link to="/contact" className="hover:text-emerald-500">Contact</Link></li>
             {!user?.isLoggedIn && (
               <li><Link to="/login" className="hover:text-emerald-500">Login</Link></li>
