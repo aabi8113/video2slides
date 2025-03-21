@@ -130,25 +130,31 @@ const VideoUploader = () => {
         )}
 
         {presentation && (
-          <div className="mt-8 p-6 bg-gray-800 rounded-xl border border-gray-700">
-            <h3 className="text-lg font-semibold text-white">Generated Presentation</h3>
-            <p className="text-sm text-gray-400">Created on {new Date(presentation.createdAt).toLocaleDateString()}</p>
-            <div className="mt-4">
-              <h4 className="text-emerald-400 font-medium">Summary</h4>
-              <p className="text-gray-300 whitespace-pre-line mt-2">{presentation.summary}</p>
+          <div className="mt-10 p-8 bg-gray-800 rounded-xl border border-gray-700 min-h-[500px]">
+            <h3 className="text-xl font-semibold text-white">Generated Presentation</h3>
+            <p className="text-base text-gray-400 mt-2">
+              Created on {new Date(presentation.createdAt).toLocaleDateString()}
+            </p>
+            <div className="mt-6">
+              <h4 className="text-emerald-400 font-medium text-lg">Summary</h4>
+              <p className="text-gray-300 whitespace-pre-line mt-3 text-l leading-loose">
+                {presentation.summary}
+              </p>
+
             </div>
-            <div className="mt-6 flex justify-end">
+            <div className="mt-8 flex justify-end">
               <a
                 href={presentation.downloadUrl}
                 download={`${presentation.title.replace(/\s+/g, '_')}.pptx`}
-                className="flex items-center space-x-2 px-4 py-2 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg transition-colors"
+                className="flex items-center space-x-2 px-5 py-3 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg transition-colors text-lg"
               >
-                <FaDownload />
+                <FaDownload size={20} />
                 <span>Download PPT</span>
               </a>
             </div>
           </div>
         )}
+
       </motion.div>
     </div>
   );
